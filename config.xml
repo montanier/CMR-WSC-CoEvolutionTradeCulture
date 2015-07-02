@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<config>  
+	<!-- Global simulation parameters -->
+	<output resultsFile="./data/province.h5" logsDir="./logs"/>
+	<numSteps value="20000" serializeResolution="10"/>
+	<size width="1800" height="1"/>
+	<numAgents value="200"/>
+	<controller type="basic" >
+		<good type="random"/>
+		<culture transmission="trade" innovation="trade" mutation=".001"/>
+	</controller>
+
+	<goods num="3">
+		<good	id="proto"	initialQuantity="0"	maxQuantity="1000"	price="-1.0"	need="-1.0"	productionRate="0"/>
+	</goods>
+
+	<rasters num="5">
+		<raster0	id="currency"	min="0.0"	max="20.0"	init="20.0"/>
+		<raster1	id="ess-a"	min="0.0"	max="20.0"	init="20.0"/>
+		<raster2	id="ess-b"	min="0.0"	max="20.0"	init="20.0"/>
+		<raster3	id="nonEss-a"	min="0.0"	max="20.0"	init="20.0"/>
+		<raster4	id="nonEss-b"	min="0.0"	max="20.0"	init="20.0"/>
+	</rasters>
+</config>
+
